@@ -7,46 +7,46 @@ import { router } from "expo-router";
 
 const App = () => {
   return (
-    <SafeAreaView className='bg-primary h-full'>
+    <SafeAreaView className="h-full bg-primary">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
-        <View className='w-full justify-center items-center min-h-[85vh] px-4'>
+        <View className="min-h-[85vh] w-full items-center justify-center px-4">
           <Image
             source={images.logo}
-            resizeMode='contain'
-            className='w-[130px] h-[84px]'
+            resizeMode="contain"
+            className="h-[84px] w-[130px]"
           ></Image>
 
           <Image
             source={images.cards}
-            resizeMode='contain'
-            className='max-w-[380px] w-full h-[300px]'
+            resizeMode="contain"
+            className="h-[300px] w-full max-w-[380px]"
           ></Image>
 
-          <View className='relative mt-5'>
-            <Text className='text-3xl text-white font-bold text-center'>
+          <View className="relative mt-5">
+            <Text className="text-center text-3xl font-bold text-white">
               Disocrver Endless Possibilities with{" "}
-              <Text className='text-secondary-200'>Aora</Text>
+              <Text className="text-secondary-200">Aora</Text>
             </Text>
             <Image
               source={images.path}
-              className='w-[136px] h-[15px] absolute -bottom-2 -right-8'
-              resizeMode='contain'
+              className="absolute -bottom-2 -right-8 h-[15px] w-[136px]"
+              resizeMode="contain"
             ></Image>
           </View>
-          <Text className='text-sm font-pregular text-gray-100 mt-7 text-center'>
+          <Text className="mt-7 text-center font-pregular text-sm text-gray-100">
             Where creativity meets innovation: embark on a journey of limitless
             exploration with Aora
           </Text>
 
           <CustomButton
-            title='Continue with Email'
+            title="Continue with Email"
             handlePress={() => router.push("/sign-in")}
-            containerStyles='w-full mt-7'
+            containerStyles="w-full mt-7"
           ></CustomButton>
         </View>
       </ScrollView>
       <StatusBar
-        backgroundColor='#161622'
+        backgroundColor="#161622"
         barStyle={"light-content"}
       ></StatusBar>
     </SafeAreaView>
