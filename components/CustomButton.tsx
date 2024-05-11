@@ -1,4 +1,4 @@
-import { GestureResponderEvent, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import React from "react";
 
 interface CustomButtonProps {
@@ -20,11 +20,11 @@ const CustomButton = ({
     <TouchableOpacity
       onPress={handlePress}
       activeOpacity={0.7}
-      className={`bg-secondary-100 rounded-xl min-h-[62px] justify-center items-center ${containerStyles} ${
+      className={`min-h-[62px] items-center justify-center rounded-xl bg-secondary-100 ${containerStyles} ${
         isLoading ? "opacity-50" : ""
       }`}
     >
-      <Text className={`text-primary font-psemibold text-lg ${textStyles}`}>
+      <Text className={`font-psemibold text-lg text-primary ${textStyles}`}>
         {title}
       </Text>
     </TouchableOpacity>
