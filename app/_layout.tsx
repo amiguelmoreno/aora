@@ -3,6 +3,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import "../global.css";
 import { GlobalProvider } from "@/context/GlobarProvider";
+import { StatusBar } from "expo-status-bar";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -41,10 +42,10 @@ const _layout = () => {
           name="(tabs)"
           options={{ headerShown: false }}
         ></Stack.Screen>
-        {/*  <Stack.Screen
-        name="/search/[query]"
-        options={{ headerShown: false }}
-      ></Stack.Screen> */}
+        <Stack.Screen
+          name="search/[query]"
+          options={{ headerShown: false }}
+        ></Stack.Screen>
       </Stack>
     </GlobalProvider>
   );

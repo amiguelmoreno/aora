@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { Tabs } from "expo-router";
 import { icons } from "../../constants";
+import { StatusBar } from "expo-status-bar";
 
 interface TabIconProps {
   icon: ImageSourcePropType;
@@ -18,12 +19,12 @@ interface TabIconProps {
 
 const TabIcon = ({ icon, color, focused, name }: TabIconProps) => {
   return (
-    <View className='items-center justify-center gap-2'>
+    <View className="items-center justify-center gap-2">
       <Image
         source={icon}
-        resizeMode='contain'
+        resizeMode="contain"
         tintColor={color}
-        className='w-6 h-6'
+        className="h-6 w-6"
       ></Image>
       <Text
         className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}
@@ -52,7 +53,7 @@ const TabsLayout = () => {
         }}
       >
         <Tabs.Screen
-          name='home'
+          name="home"
           options={{
             title: "Home",
             headerShown: false,
@@ -60,14 +61,14 @@ const TabsLayout = () => {
               <TabIcon
                 icon={icons.home}
                 color={color}
-                name='Home'
+                name="Home"
                 focused={focused}
               />
             ),
           }}
         />
         <Tabs.Screen
-          name='bookmark'
+          name="bookmark"
           options={{
             title: "Bookmark",
             headerShown: false,
@@ -75,14 +76,14 @@ const TabsLayout = () => {
               <TabIcon
                 icon={icons.bookmark}
                 color={color}
-                name='Bookmark'
+                name="Bookmark"
                 focused={focused}
               />
             ),
           }}
         />
         <Tabs.Screen
-          name='create'
+          name="create"
           options={{
             title: "Create",
             headerShown: false,
@@ -90,7 +91,7 @@ const TabsLayout = () => {
               <TabIcon
                 icon={icons.plus}
                 color={color}
-                name='Create'
+                name="Create"
                 focused={focused}
               />
             ),
@@ -98,7 +99,7 @@ const TabsLayout = () => {
         />
 
         <Tabs.Screen
-          name='profile'
+          name="profile"
           options={{
             title: "Profile",
             headerShown: false,
@@ -106,13 +107,14 @@ const TabsLayout = () => {
               <TabIcon
                 icon={icons.profile}
                 color={color}
-                name='Profile'
+                name="Profile"
                 focused={focused}
               />
             ),
           }}
         />
       </Tabs>
+      <StatusBar backgroundColor="#161622" style="light"></StatusBar>
     </>
   );
 };
