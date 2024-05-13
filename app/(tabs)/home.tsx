@@ -55,11 +55,7 @@ const Home = () => {
                 ></Image>
               </View>
             </View>
-            <SearchInput
-              placeholder="Search for a video topic"
-              handleChangeText={() => {}}
-            />
-            {/* add otehr props */}
+            <SearchInput placeholder="Search for a video topic" />
             <View className="w-full flex-1 pb-8 pt-5">
               <Text className="mb-3 font-pregular text-lg text-gray-100">
                 Latests Videos

@@ -5,7 +5,7 @@ import { router, usePathname } from "expo-router";
 
 interface SearchInputProps {
   initialQuery?: string | string[];
-  handleChangeText: (text: string) => void;
+  handleChangeText?: (text: string) => void;
   keyboardType?: string;
   otherStyles?: string;
   placeholder?: string;

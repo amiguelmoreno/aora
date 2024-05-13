@@ -13,13 +13,13 @@ import { icons } from "@/constants";
 import { Video, ResizeMode, AVPlaybackStatus } from "expo-av";
 
 const zoomIn = {
-  0: { scale: 0.85 },
-  1: { scale: 1 },
+  from: { scale: 0.85 },
+  to: { scale: 1 },
 };
 
 const zoomOut = {
-  0: { scale: 1 },
-  1: { scale: 0.85 },
+  from: { scale: 1 },
+  to: { scale: 0.85 },
 };
 
 const TrendingItem = ({ activeItem, item }: any) => {
@@ -28,7 +28,11 @@ const TrendingItem = ({ activeItem, item }: any) => {
   return (
     <Animatable.View
       className="mb-2 mr-5"
-      // animation={activeItem === item.$id ? zoomIn : zoomOut}
+      animation={
+        activeItem === item.$id
+          ? (zoomIn as Animatable.CustomAnimation)
+          : (zoomOut as Animatable.CustomAnimation)
+      }
       duration={500}
     >
       {play ? (

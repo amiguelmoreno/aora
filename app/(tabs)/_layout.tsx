@@ -48,7 +48,8 @@ const TabsLayout = () => {
             backgroundColor: "#161622",
             borderTopWidth: 1,
             borderTopColor: "#232533",
-            height: 84,
+            height: 85,
+            paddingTop: 20,
           },
         }}
       >
@@ -67,7 +68,7 @@ const TabsLayout = () => {
             ),
           }}
         />
-        <Tabs.Screen
+        {/*     <Tabs.Screen
           name="bookmark"
           options={{
             title: "Bookmark",
@@ -81,7 +82,7 @@ const TabsLayout = () => {
               />
             ),
           }}
-        />
+        /> */}
         <Tabs.Screen
           name="create"
           options={{

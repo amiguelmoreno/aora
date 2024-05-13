@@ -30,6 +30,15 @@
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "endpoint": "https://cloud.appwrite.io/v1",
+      "platform": "com.miguemoreno.aora",
+      "projectId": "663e7a09003c3d8837e7",
+      "databaseId": "663e7b5f0019bfd115d9",
+      "userCollectionId": "663e7b7800002dfeec1e",
+      "videoCollectionId": "663e7b97002d95da3cc0",
+      "storageId": "663e7ccb000382f8c4c9"
     }
   }
 }
